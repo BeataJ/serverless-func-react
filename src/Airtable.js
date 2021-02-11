@@ -9,6 +9,7 @@ const Airtable = () => {
   const fetchData = async () => {
     try {
       const { data } = await axios.get(url);
+      setProducts(data);
     } catch (error) {}
   };
 
