@@ -13,6 +13,10 @@ const Airtable = () => {
     } catch (error) {}
   };
 
+  useEffect(() => {
+    fetchData();
+  });
+
   return <div>hello from airtable</div>;
 };
 
