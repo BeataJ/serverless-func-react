@@ -31,7 +31,7 @@ const Airtable = () => {
               <img src={url} alt={name} />
               <div className='info'>
                 <h5>{name}</h5>
-                <h5>${price}</h5>
+                <h5 className='price'>${price}</h5>
               </div>
             </article>
           );
