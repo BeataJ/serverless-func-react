@@ -15,9 +15,30 @@ const Airtable = () => {
 
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
-  return <div>hello from airtable</div>;
+  return (
+    <section className='section section-center'>
+      <div className='title'>
+        <h2>AirTable</h2>
+        <div className='title-underline'></div>
+      </div>
+      <div className='products'>
+        {products.map((product) => {
+          const { id, url, price, name } = product;
+          return (
+            <article className='product' key={id}>
+              <img src={url} alt={name} />
+              <div className='info'>
+                <h5>{name}</h5>
+                <h5>${price}</h5>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
 };
 
 export default Airtable;
