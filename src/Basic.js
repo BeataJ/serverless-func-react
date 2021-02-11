@@ -15,7 +15,33 @@ const Basic = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  return <section>hello from basic example</section>;
+  return (
+    <section className='section section-center'>
+      <div className='title'>
+        <h2>basic setup</h2>
+        <div className='title-underline'></div>
+      </div>
+      <div className='product'>
+        {products.map((product) => {
+          const {
+            id,
+            image: { url },
+            price,
+            name,
+          } = product;
+          return (
+            <article className='product' key={id}>
+              <img src={url} alt={name} />
+              <div className='info'>
+                <h5>{name}</h5>
+                <h5 className='price'>${price}</h5>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
 };
 
 export default Basic;
