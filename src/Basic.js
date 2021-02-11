@@ -21,7 +21,7 @@ const Basic = () => {
         <h2>basic setup</h2>
         <div className='title-underline'></div>
       </div>
-      <div className='product'>
+      <div className='products'>
         {products.map((product) => {
           const {
             id,
